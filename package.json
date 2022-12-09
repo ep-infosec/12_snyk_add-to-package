@@ -1,0 +1,39 @@
+{
+  "name": "@snyk/add-to-package",
+  "description": "Adds Snyk to the package dependencies",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=6"
+  },
+  "scripts": {
+    "cover": "tap -R spec --cov --coverage-report=lcov test/*.test.js",
+    "test": "npm run test:unit && npm run test:acceptance",
+    "test:acceptance": "jest --runInBand \"/test/acceptance/((.+)/)*[^/]+\\.test\\.js\"",
+    "test:unit": "jest --runInBand \"/test/unit/((.+)/)*[^/]+\\.test\\.js\"",
+    "release": "semantic-release"
+  },
+  "keywords": [],
+  "author": "snyk.io",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "jest": "^27.0.4",
+    "semantic-release": "^17.4.4",
+    "tap": "^12.6.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/snyk/add-to-package.git"
+  },
+  "bugs": {
+    "url": "https://github.com/snyk/add-to-package/issues"
+  },
+  "homepage": "https://github.com/snyk/add-to-package#readme",
+  "directories": {
+    "test": "test"
+  }
+}
